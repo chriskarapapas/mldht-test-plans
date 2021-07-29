@@ -14,4 +14,4 @@ require (
 	github.com/testground/sdk-go v0.2.7
 )
 
-replace github.com/libp2p/go-libp2p-kad-dht => github.com/chriskarapapas/go-libp2p-kad-dht v0.12.1
+replace github.com/libp2p/go-libp2p-kad-dht => github.com/chriskarapapas/go-libp2p-kad-dht v0.12.2
