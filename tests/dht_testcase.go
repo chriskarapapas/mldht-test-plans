@@ -81,7 +81,8 @@ func DHTTest(runenv *runtime.RunEnv) error {
 		dht.ProtocolPrefix("/testground"),
 		dht.Datastore(datastore.NewMapDatastore()),
 	}
-	kademliaDHT, err := dht.New(ctx, libp2pNode, dhtOptions...)
+	kademliaDHT, err, test := dht.New(ctx, libp2pNode, dhtOptions...)
+	runenv.RecordMessage("I got from the dht this value %d", test)
 	if err!= nil {
 		runenv.RecordMessage("Error in seting up Kadmlia %s", err)
 		return err
